@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVelocityPlayground.Web", "NVelocityPlayground.Web\NVelocityPlayground.Web.csproj", "{859B0766-4797-41BA-BB34-F61DAD50C368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{859B0766-4797-41BA-BB34-F61DAD50C368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859B0766-4797-41BA-BB34-F61DAD50C368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859B0766-4797-41BA-BB34-F61DAD50C368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859B0766-4797-41BA-BB34-F61DAD50C368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBACE8B8-5756-4FAD-BCBE-C4D1E578FBE6}
+	EndGlobalSection
+EndGlobal
