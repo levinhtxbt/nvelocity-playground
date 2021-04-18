@@ -1,0 +1,180 @@
+<!-- CODE TO GRAB FOR CONNECT -->
+#foreach ($c in $coupons)
+#beforeall
+#each
+
+<!-- Coupon table -->
+<tr>
+	<td valign="top" align='center'>
+		<table cellpadding="0" cellspacing="0" border="0" align='center' class="mobile-coupon-full" width="375" style="width:375px; background-color: #E7E7E7; border: 1px solid #E7E7E7;">
+
+			<!-- Coupon Details -->
+			<tr>
+				<td valign="top" bgcolor="#FFFFFF" style='padding: 0 10px; background-color: #FFFFFF;'>
+					<table width='100%' cellpadding="0" cellspacing="0" border="0">
+
+						<tr>
+							<td align='left' valign="top" style="padding-top: 12px;padding-bottom: 5px; text-align: left;">
+
+								<span style="font-size:20px; line-height:24px; color:#000000; font-weight:bold;">
+									$c.Name
+								</span>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td id="b33" class="EditField defaultlink" valign="top" align='left' style="font-size:12px; line-height:16px; color:#000000;">
+
+								#if ($c.Subtitle != '')
+								<span style="font-size:12px; line-height:16px; color:#000000;">
+									$c.Subtitle
+								</span>
+								<br />
+								#end
+
+								<span>
+									$c.Body.Replace("\n", "<br />")
+								</span>
+
+							</td>
+						</tr>
+
+						<tr>
+							<td class="defaultlink" valign="top" align='left' style="font-size: 12px; line-height: 16px; color:#000000; padding-top: 15px;">
+
+								#if ($c.CouponType != 'Informational')
+								#if ($c.Code)
+								<table cellpadding="0" cellspacing="0" border="0" style="padding: 0; margin: 0;">
+									<tr>
+										<td style="padding: 0; margin: 0; padding-top: 5px; font-size: 12px; line-height: 16px; color:#000000;">
+											<span id="b35" class="EditField defaultlink"><b>Coupon Code:</b> $c.Code</span>
+										</td>
+									</tr>
+								</table>
+								#end
+								#end
+
+							</td>
+						</tr>
+
+						<tr>
+							<td id="b36" class="EditField defaultlink" valign="top" align='left' style="font-size:9px; line-height:12px; color:#000000; padding-top: 15px; padding-bottom: 5px">
+
+								#set ( $couponExpiration = $c.GetExpirationDate(null) )
+								#if ($c.CouponExpires && $couponExpiration)
+								<span style="font-size:9px; line-height:12px; color:#000000;">
+									Valid until: $couponExpiration.ToShortDateString()
+								</span>
+								<br>
+								#else
+								<span style="font-size:9px; line-height:12px; color:#000000;">
+									No expiration
+								</span>
+								<br>
+								#end
+
+								#if ($couponHelper.ShowPrintLink($c))
+								<div style="text-align: left;">
+									<span>$c.Details</span>
+								</div>
+								#end
+
+							</td>
+						</tr>
+
+						<tr>
+							<td style='padding: 11px 0px;'>
+								<table cellpadding="0" cellspacing="0" border="0" align='center' width='100%'>
+
+									<tr>
+										<td align='left' style="font-size:0px; line-height:0px;">
+											#if ($couponHelper.ShowCouponLink($c))
+											<span style="font-size:9px; line-height:12px; color:#000000; text-align: left;">
+												$couponHelper.GetCouponLink($c, "Click Here to Schedule this Service")
+											</span>
+											#end
+										</td>
+
+										<td width="20" style="width: 20px; max-width: 20px;">
+											&nbsp;
+										</td>
+
+										<td align='right' style="font-size:0px; line-height:0px; text-align: right;">
+											#if ($couponHelper.ShowPrintLink($c))
+											<a href="$couponHelper.GetPrintUrl($c, true)" data-surl-type="$c.CouponLinkType" style="color: #910A2D; font-size:9px; line-height:12px;">Print</a>
+											#end
+										</td>
+									</tr>
+
+								</table>
+							</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+			<!-- / Coupon Details -->
+
+			<!-- Dashed Line -->
+			<tr>
+				<td valign="bottom" bgcolor="#E7E7E7" style='background-color: #E7E7E7;'>
+					<table cellpadding="0" cellspacing="0" border="0" align='center' width='100%'>
+
+						<tr>
+							<td align='center'>
+								<table cellpadding="0" cellspacing="0" border="0" align='center' width='100%'>
+									<tr>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+										<td height='14' width='20' style='border-bottom: 2px #910A2D solid'></td>
+										<td height='14' style='border-bottom: 2px #E7E7E7 solid'></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr style='background-color: #E7E7E7;'>
+							<td height='14'></td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+			<!-- / Dashed Line -->
+
+		</table>
+	</td>
+</tr>
+<!-- //Coupon Table -->
+
+<!-- Coupon Bottom Space -->
+<tr>
+	<td height="30" style="height:30px;">&nbsp;</td>
+</tr>
+<!-- Coupon Bottom Space -->
+
+
+#afterall
+#end

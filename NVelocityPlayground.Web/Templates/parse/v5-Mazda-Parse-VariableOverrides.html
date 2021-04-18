@@ -1,0 +1,12 @@
+#set ($storyOverride1 = "v5-Mazda-Parse-Story-1.html")
+#set ($storyOverride2 = "v5-Mazda-Parse-Story-2.html")
+#set ($footerOverride = "v5-Mazda-Parse-Footer.html")
+
+
+<!-- IF -->
+#if ($companyName == "DealerName")
+<!---->#set ($storyOverride1 = "v5-DealerName-Parse-Story-1.html")
+<!---->#set ($storyOverride2 = "v5-DealerName-Parse-Story-2.html")
+<!---->#set ($footerOverride = "v5-DealerName-Parse-Footer.html")
+#end
+<!-- END -->

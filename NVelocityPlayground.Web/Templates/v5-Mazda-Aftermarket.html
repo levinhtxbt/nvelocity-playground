@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+	<meta name="format-detection" content="telephone=no" />
+
+	<!-- Conditional Parse -->
+	#parse("v5-Mazda-Parse-VariableOverrides")
+	<!-- Conditional Parse -->
+
+	#if ($customerName.FirstName == "")
+	#set ($customerContactName = "Valued Client")
+	#else
+	#set ($customerContactName = "$customerName.FirstName")
+	#end
+
+	#set ($hero = "v5-Mazda-Hero-Aftermarket")
+	#set ($subheading = "$customerContactName, congratulations on the purchase of")
+	#set ($heading = "Your $Vehicle.Make $Vehicle.Model")
+
+
+	<!--[if gte mso 9]><xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml><![endif]-->
+
+	<title>$Subjectline</title>
+
+	<!--[if !mso]><!-->
+	<style type="text/css">
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url("https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Regular.woff2") format("woff2"), url("https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Regular.woff") format("woff");
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Italic.woff2') format('woff2'), url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Italic.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+		}
+
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Medium.woff2') format('woff2'), url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Medium.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-MediumItalic.woff2') format('woff2'), url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-MediumItalic.woff') format('woff');
+			font-weight: 500;
+			font-style: italic;
+		}
+
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Bold.woff2') format('woff2'), url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-Bold.woff') format('woff');
+			font-weight: 600;
+			font-style: bold;
+		}
+
+		@font-face {
+			font-family: 'MazdaTypeTT';
+			src: url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-BoldItalic.woff2') format('woff2'), url('https://www.mazda.com.au//assets/fonts/MazdaTypeTT-BoldItalic.woff') format('woff');
+			font-weight: 600;
+			font-style: italic;
+		}
+	</style>
+	<!--<![endif]-->
+
+
+	<!-- Base Styles -->
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			-webkit-text-size-adjust: 100% !important;
+			-ms-text-size-adjust: 100% !important;
+			-webkit-font-smoothing: antialiased !important;
+		}
+
+		img {
+			border: 0 !important;
+			outline: none !important;
+		}
+
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0px;
+			mso-table-rspace: 0px;
+		}
+
+		td,
+		a,
+		span {
+			padding: 0;
+			border-collapse: collapse;
+			mso-line-height-rule: exactly;
+		}
+
+		.ExternalClass * {
+			line-height: 100%;
+		}
+
+		.defaultLink,
+		.defaultLink a {
+			color: inherit !important;
+			text-decoration: none !important;
+		}
+
+
+		@media only screen and (min-width:481px) and (max-width:599px) {
+			.mobile-center {
+				text-align: center;
+			}
+
+			.main_table {
+				width: 100% !important;
+			}
+
+			.wrapper-full {
+				width: 100% !important;
+			}
+
+			.mobile-hide {
+				display: none !important;
+			}
+
+			.full_img {
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			.side10 {
+				width: 10px !important;
+			}
+
+
+			.p10 {
+				padding: 10px !important;
+			}
+
+			/* Padding Left Right Bottom */
+			.h20 {
+				height: 20px !important;
+				font-size: 1px !important;
+				line-height: 1px !important;
+			}
+
+			.mobile-stack {
+				display: block !important;
+			}
+
+			.font_15 {
+				font-size: 13px !important;
+				line-height: 18px !important;
+			}
+
+			.clear {
+				clear: both !important;
+				width: 100% !important;
+				display: block !important;
+			}
+
+			.mobile-amenities-width-R4 {
+				width: 40% !important;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.mobile-center {
+				text-align: center;
+			}
+
+			.main_table {
+				width: 100% !important;
+			}
+
+			.wrapper-full {
+				width: 100% !important;
+			}
+
+			.mobile-hide {
+				display: none !important;
+			}
+
+			.full_img {
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			.side10 {
+				width: 10px !important;
+			}
+
+			.p10 {
+				padding: 10px !important;
+			}
+
+			.h20 {
+				height: 20px !important;
+			}
+
+			.mobile-stack {
+				display: block !important;
+			}
+
+			.clear {
+				clear: both !important;
+				width: 100% !important;
+				display: block !important;
+			}
+
+			.font_15 {
+				font-size: 10px !important;
+				line-height: 15px !important;
+			}
+		}
+	</style>
+	<!-- / Base Styles -->
+
+	<!-- Amenities -->
+	<style type="text/css">
+		@media only screen and (min-width:481px) and (max-width:599px) {
+			.mobile-amenities-R4-TD {
+				width: 40% !important;
+			}
+
+			.mobile-amenities-R4-Table {
+				width: 100% !important;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.mobile-amenities-R4-TD {
+				width: 40% !important;
+			}
+		}
+
+		@media screen and (max-width: 400px) {
+			.mobile-amenities-R4-TD {
+				width: 120px !important;
+			}
+
+			.mobile-amenities-R3-TD {
+				width: 105px !important;
+			}
+		}
+	</style>
+	<!-- / Amenities -->
+
+	<!-- Coupons -->
+	<style type="text/css">
+		@media screen and (max-width: 420px) {
+			.mobile-coupon-full {
+				width: 100% !important;
+			}
+		}
+	</style>
+	<!-- / Coupons -->
+
+	<!-- Unique Styles -->
+	<style type="text/css">
+		.button-text a {
+			color: #ffffff !important;
+			text-decoration: none !important;
+		}
+
+		.CopyLink,
+		.CopyLink a {
+			color: #101010 !important;
+			text-decoration: none !important;
+			font-weight: bold !important;
+		}
+
+		.link-color {
+			text-decoration-color: #910a2d !important;
+			color: #910a2d !important;
+			text-decoration: underline !important;
+		}
+
+		@media screen and (max-width: 480px) {
+			.mobile-logo-left {
+				width: 160px !important;
+			}
+
+			.mobile-logo-right {
+				width: 110px !important;
+			}
+		}
+	</style>
+	<!-- / Unique Styles -->
+
+	<!-- MSO Fallback -->
+	<!--[if mso]>
+      <style type="text/css">
+        body,
+        table,
+        tr,
+        td,
+        p,
+        span,
+        a {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      </style>
+    <![endif]-->
+	<!-- / MSO Fallback -->
+
+	<!-- Coupons -->
+	<style type="text/css">
+		@media screen and (max-width: 420px) {
+			.mobile-coupon-full {
+				width: 100% !important;
+			}
+		}
+	</style>
+
+</head>
+
+<body class="body" style="min-width: 320px; Margin:0px auto; padding:0px; background-color:#F5F5F5;" bgcolor="#F5F5F5">
+	<!-- == Header Section == -->
+	<p id="PreHeader"
+		style="display:none !important;visibility:hidden;overflow:hidden;opacity:0;color:#F5F5F5;height:0;max-height:0;min-height:0;width:0;mso-hide:hide-all;font-size:1px;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;Margin-top:0;Margin-bottom:0;Margin-right:0;Margin-left:0;">
+		Please take the time to explore our range of aftermarket vehicle products to protect, prolong and improve your vehicle. All of which could be conveniently applied or installed before you take delivery of your vehicle.</p>
+
+	<!-- Full Wrap -->
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#F5F5F5;" bgcolor="#F5F5F5">
+		<tr>
+			<td align="center" style="font-family: 'MazdaTypeTT', Arial, sans-serif;">
+
+				<!-- 600px Wrap -->
+				<table align="center" width="600" border="0" cellspacing="0" cellpadding="0" class="main_table" style="width:600px; table-layout:fixed;">
+					<tr>
+						<td align="center">
+
+							<!-- == View Online == -->
+							<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;">
+								<tr>
+									<td width="25" style="width:25px;" class="side10">&nbsp;</td>
+									<td valign="top" align="center">
+										<table width="550" border="0" cellspacing="0" cellpadding="0" align="center" style="width:550px;" class="wrapper-full">
+											<tr>
+												<td height="15" style="height:15px; line-height:0px; font-size:0px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td valign="top" align="center" style="font-size: 10px; line-height:15px; color:#000000;">
+													Email not displaying properly? <a href="$webViewUrl" data-surl-type="General" data-surl-meta1="View Online" target="_blank" style="text-decoration:underline; color: #000000;">View online</a>
+												</td>
+											</tr>
+											<tr>
+												<td height="15" style="height:15px; line-height:0px; font-size:0px;">&nbsp;</td>
+											</tr>
+										</table>
+									</td>
+									<td width="25" style="width:25px;" class="side10">&nbsp;</td>
+								</tr>
+							</table>
+							<!-- == / View Online == -->
+
+							<!-- == Header == -->
+							<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;">
+								<tr>
+									<td valign="top" align="center" bgcolor="#101010" style="background-color:#101010;">
+
+										<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="width:600px;" class="wrapper-full">
+											<tr>
+												<td width="15" style="width:15px;" class="side10">&nbsp;</td>
+												<td valign="top" align="center">
+													<table width="540" border="0" cellspacing="0" cellpadding="0" align="center" style="width:540px;" class="wrapper-full">
+														<tr>
+															<td height="25" style="height:25px; line-height:0px; font-size:0px;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td valign="top" align="center">
+																<table width="540" border="0" cellspacing="0" cellpadding="0" align="center" style="width:540px;" class="wrapper-full">
+																	<tr>
+																		<td align="left" style="font-size: 0; line-height: 0;">
+																			<a href="$website.url" target="_blank" data-surl-type="HomePage" data-surl-meta1="Header - Dealership Logo" style="text-decoration:none; word-break: break-all;">
+																				#if($image.OverrideExists('v4MazdaDealerLogo'))
+																				<img src="$image.GetUrl('v4MazdaDealerLogo')" width="200" alt="$companyName" border="0" class='mobile-logo-left' style="display:block; width:200px; font-size:15px; line-height:20px; color:#ffffff;" />
+																				#else
+																				<img src="$image.GetUrl('dealerlogo')" width="200" alt="$companyName" border="0" class='mobile-logo-left' style="display:block; width:200px; font-size:15px; line-height:20px; color:#ffffff;" />
+																				#end
+																			</a>
+																		</td>
+																		<td align="center" width="30" style='width: 30px;'>
+																			&nbsp;
+																		</td>
+																		<td align="right">
+																			<a href="$website.url" target="_blank" data-surl-type="HomePage" data-surl-meta1="Header - Dealership Logo" style="text-decoration:none;">
+																				<img src="$image.GetUrl('v5-Mazda-Logo-Zoom-Zoom')" width="150" alt="Zoom Zoom" border="0" class='mobile-logo-right' style="display:block; width:150px; font-size:15px; line-height:20px; color:#ffffff;" />
+																			</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td height="25" style="height:25px; line-height:0px; font-size:0px;">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="15" style="width:15px;" class="side10">&nbsp;</td>
+											</tr>
+										</table>
+
+									</td>
+								</tr>
+							</table>
+							<!-- == / Header == -->
+
+							<!-- == Hero == -->
+							<table>
+								<tr>
+									<td valign="top" align="center" style="background-color:#101010;" bgcolor="#101010">
+
+										<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="width:600px;" class="wrapper-full">
+											<tr>
+												<td width="18" style="width:18px;" class="side10">&nbsp;</td>
+												<td valign="top" align="center">
+													<table width="564" border="0" cellspacing="0" cellpadding="0" align="center" style="width:564px;" class="wrapper-full">
+														<tr>
+															<td valign="top" align="center">
+																<a href="$website.url" data-surl-type="HomePage" data-surl-meta1="Hero image" target="_blank" style="text-decoration:none; color: #ffffff">
+																	<img src="$image.GetUrl($hero)" width="564" alt="Hero Image" border="0" style="display:block; width:564px;" class="full_img" />
+																</a>
+															</td>
+														</tr>
+														<tr>
+															<td height="40" style="height:40px;" class="h20">&nbsp;</td>
+														</tr>
+														<tr>
+															<td id="b1v5" class="EditField" valign="top" align="center" style="font-size:16px; line-height:20px; color:#ffffff; font-weight:300; padding: 0 15px;">
+																$subheading
+															</td>
+														</tr>
+														<tr>
+															<td height="17" style="height:17px; line-height:0px; font-size:0px;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td id="b2v5" class="EditField" valign="top" align="center" style="font-size:28px; line-height:32px; color:#ffffff;text-transform: uppercase;font-weight: bold;">
+																$heading
+															</td>
+														</tr>
+														<tr>
+															<td height="30" style="height:30px;" class="h20">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+												<td width="20" style="width:20px;" class="side10">&nbsp;</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+							<!-- == / Hero == -->
+
+
+							<!-- == Body == -->
+							<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;  background-color: #ffffff;">
+
+								<!-- Content section -->
+								<tr>
+									<td valign="top" align="center" style="padding-top: 30px;">
+										<!-- Details Editable -->
+										<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="width:600px;max-width: 600px!important;" class="wrapper-full">
+
+											<tr>
+												<td width="25" style="width: 25px;"></td>
+												<td align="left" style="border-top: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8;">
+													<table border="0" cellspacing="0" cellpadding="0" style="vertical-align: top;">
+														<tr style="vertical-align: top;">
+
+															<!---->
+															<td align="center" valign="top" style="padding: 15px 0; display: inline-block;" class="mobile-stack">
+																<table border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="wrapper-full">
+																	<tr>
+																		<td valign="top" align="left" style='padding-right: 20px;'>
+																			<table border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper-full">
+																				<tr>
+																					<td id="b3v5" class="EditField" valign="top" style="font-size:15px; line-height:16px; color:#101010; text-transform: uppercase;font-weight: bold;">
+																						$companyName
+																					</td>
+																				</tr>
+																				<tr>
+																					<td id="b4v5" class="EditField defaultLink" valign="top" style="font-size:12px; line-height:16px; color:#101010; word-break: break-all;">
+																						$address.ToHtmlString(true,true,true)
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<!---->
+
+															<!---->
+															<td align="center" valign="top" style="padding: 15px 0; display: inline-block;" class="mobile-stack">
+																<table border="0" cellspacing="0" cellpadding="0" align="center" valign="top" class="wrapper-full">
+																	<tr>
+																		<td valign="top" align="left" style='padding-right: 20px;'>
+																			<table border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper-full">
+																				<tr>
+																					<td id="b7v5" class="EditField" valign="top" style="font-size:15px; line-height:16px; color:#101010; text-transform: uppercase;font-weight: bold;">
+																						$vehicle.Year $vehicle.make <br>
+																						$vehicle.Model
+																					</td>
+																				</tr>
+																				<tr>
+																					<td id="b8v5" class="EditField" valign="top" style="font-size:12px; line-height:16px; color:#101010;">
+																						Rego: <span style="font-size: 11px; line-height: 16px;">$vehicle.plate</span><br>
+																						VIN: <span style="font-size: 11px; line-height: 16px;">$vehicle.Vin</span>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<!---->
+
+														</tr>
+													</table>
+												</td>
+												<td width="25" style="width: 25px;"></td>
+
+											</tr>
+
+										</table>
+										<!-- /Details Editable END-->
+									</td>
+								</tr>
+								<!-- //Content section -->
+
+
+								<!-- Main Body -->
+								<tr>
+									<td valign="top" align="left">
+										<table width="600" border="0" cellspacing="0" cellpadding="0" style="width:600px;" class="wrapper-full">
+											<tr>
+												<td width="10" style="width:10px;">&nbsp;</td>
+
+												<td valign="top" align="left">
+													<table width="580" border="0" cellspacing="0" cellpadding="0" style="width:580px;" class="wrapper-full">
+														<tr>
+															<td height="37" style="height:37px;" class="h20">&nbsp;</td>
+														</tr>
+
+														<tr>
+															<td valign="top" style="padding-left: 15px; padding-right: 15px;  padding-bottom: 15px; color:#101010;">
+																<p id="bodycopy1" class="EditField" style="font-size:14px; line-height:20px; color:#101010; Margin-top: 14px; Margin-bottom: 14px;">
+																	Please take the time to explore our range of aftermarket vehicle products to protect, prolong and improve your vehicle. All of which could be conveniently applied or installed before you take delivery of your vehicle.
+																</p>
+
+																<p id="SignOffv5" class="EditField" style="font-size:14px; line-height:20px; color:#101010; Margin-top: 34px; Margin-bottom: 14px;">
+																	Kind regards,<br>
+																	$contactName,<br>
+																	$ContactTitle
+																</p>
+															</td>
+														</tr>
+
+
+
+														<tr>
+															<td align="left" valign="top" style="padding-bottom: 20px;">
+																<table border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+
+																		<td id="buttonMainv5" class="EditField" valign="top" align="left" style="padding-left: 5px; color: #ffffff;">
+
+																			<!-- Button 1 -->
+																			<table border="0" cellspacing="0" cellpadding="0" class="mobile-stack" style="display: inline-block;">
+																				<tr>
+																					<td valign="top" align="center" style="padding: 10px 10px;">
+																						<table border="0" cellspacing="0" cellpadding="0" align="center" width="170" style="width:170px;">
+																							<tr>
+																								<td valign="middle" align="center" bgcolor="#910a2d" width="170" height="48" style="width:170px; background-color: #910a2d; border-radius:4px; font-size:13px; color:#ffffff; font-weight: bold;">
+																									<a href="$website.url" data-surl-type="Scheduler" data-surl-meta1="CTA - View Products" style="text-decoration:none; color:#ffffff; display:block; line-height:48px;text-transform: uppercase;">
+																										View Products
+																									</a>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																				</tr>
+																			</table>
+																			<!-- /Button 1 -->
+
+																		</td>
+
+																	</tr>
+																</table>
+															</td>
+														</tr>
+
+														<tr>
+															<td valign="top" align="center" style="font-size: 0;">
+																<table border="0" cellspacing="0" cellpadding="0">
+                                                                    #if($image.OverrideExists('v4MazdaSignatureLogo'))
+																	<tr>
+																		<td height="5" style="height:5px; line-height:0px; font-size:0px;" class="h20">
+																			<img src="$image.GetUrl('spacer')" width="1" height="1" alt="" border="0" style="display:block;" />
+																		</td>
+																	</tr>
+																	<tr>
+																		<td valign="top" align="center" style="word-break: break-all;">
+																			<a href="$website.url" target="_blank" data-surl-type="HomePage" data-surl-meta1="Body - Signature Logo" style="text-decoration:none;">
+																				<img src="$image.GetUrl('v4MazdaSignatureLogo')" alt="Mazda" border="0" width="170" style="width: 170px; display:block; font-size:15px; line-height:20px; color:#000000;" />
+																			</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td height="30" style="height:30px;" class="h20">&nbsp;</td>
+																	</tr>
+																	#end
+																</table>
+															</td>
+														</tr>
+
+
+													</table>
+												</td>
+												<td width="10" style="width:10px;">&nbsp;</td>
+											</tr>
+
+
+										</table>
+									</td>
+								</tr>
+								<!-- / Main Body -->
+
+								<!-- Spacer -->
+								<tr>
+									<td bgcolor="#F5F5F5" height="31" style="height:31px;background-color: #F5F5F5; border: none;" class="h20">&nbsp;</td>
+								</tr>
+								<!-- /Spacer END -->
+
+								<!-- Story Editable -->
+								<tr>
+									<td id="stories" class="EditField" valign="top" align="center" style="color:#010000; font-size:0;">
+										<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="width:600px;" class="wrapper-full">
+
+											<!-- Story 1 -->
+											#if ($image.OverrideExists('v5-Mazda-Story-1'))
+											<!---->#parse($storyOverride1)
+
+											#end
+
+											<!-- Story 2 -->
+											#if ($image.OverrideExists('v5-Mazda-Story-2'))
+											<!---->#parse($storyOverride2)
+
+											#end
+
+										</table>
+									</td>
+								</tr>
+								<!-- /Story Editable END -->
+
+
+								<!-- Coupons Editable -->
+								<tr>
+									<td valign="top" align="center" bgcolor="#F5F5F5" style="background-color: #F5F5F5;">
+										#if($couponsIncluded)
+										<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#D5D5D5" style="width:600px; background-color: #D5D5D5;" class="wrapper-full coupon_table">
+											<tr>
+												<td valign="top" align="center" style="padding: 0 15px;">
+													<table width="560" border="0" cellspacing="0" cellpadding="0" align="center" style="width:560px;" class="wrapper-full coupon-font">
+														<!-- Coupon Section Header -->
+														<tr>
+															<td height="23" style="height:23px;" class="h20">&nbsp;</td>
+														</tr>
+														<tr>
+															<td align="center">
+																<img src="$image.GetUrl('icon-tag-mazda')" width="70" alt="" border="0" style="display:block; width:70px;" />
+															</td>
+														</tr>
+														<tr>
+															<td id="b31" class="EditField coupon-font coupon-font-bold" valign="top" align="center" style="padding: 14px 0px; font-size:24px; line-height:28px; color:#101010; font-weight: bold; text-transform: uppercase;">
+																Our gift to you
+															</td>
+														</tr>
+														<!-- //Coupon Section Header -->
+
+														#parse("v5-Mazda-Parse-Coupon.html")
+
+													</table>
+												</td>
+											</tr>
+
+											<!-- Spacer -->
+											<tr>
+												<td bgcolor="#F5F5F5" height="31" style="height:31px;background-color: #F5F5F5; border: none;" class="h20">&nbsp;</td>
+											</tr>
+											<!-- /Spacer END -->
+										</table>
+										#end
+									</td>
+								</tr>
+								<!-- /Coupons Editable END-->
+
+
+								<!-- Amenities Editable -->
+								<tr>
+									<td align="center" valign="top">
+										<table align="center" border="0" cellspacing="0" cellpadding="0" class="wrapper-full" style="width:600px;">
+											#if ($amenities.Count != 0)
+											<tr>
+												<td align="center" valign="top" bgcolor="#F5F5F5" style="background-color: #F5F5F5; padding-bottom: 30px;">
+													<table align="center" border="0" cellspacing="0" cellpadding="0" bgcolor="#101010" style="width:600px; background-color: #101010;" class="wrapper-full">
+														<tr>
+															<td height="24" style="height:24px;" class="h20">&nbsp;</td>
+														</tr>
+														<tr>
+															<td align="center" valign="top">
+																<img align="center" src="$image.GetUrl('v5-Mazda-Icon-Amenities')" width="80" alt=" " border="0" style="display:block; width:80px; text-align: center;" />
+															</td>
+														</tr>
+														<tr>
+															<td height="15" style="height:15px;">&nbsp;</td>
+														</tr>
+														<tr>
+															<td id="b25" class="EditField" valign="top" align="center" style="font-size:24px; line-height:28px; text-transform: uppercase;font-weight: bold; color:#ffffff;">Our Amenities</td>
+														</tr>
+														<tr>
+															<td align='center' valign="top" style='padding-top: 30px;'>
+
+																<table>
+																	<tr>
+
+																		<!-- Set RowCount -->
+																		#set ($RowCount = 3)
+
+																		<!-- Counter -->
+																		#set ($AmenitiesCount = 0)
+																		#foreach ($a in $amenities)
+																		#set ($AmenitiesCount = $AmenitiesCount + 1)
+																		#end
+
+																		<!-- Counter -->
+																		#if($AmenitiesCount == 4 || $AmenitiesCount == 7 || $AmenitiesCount == 10)
+																		#set ($RowCount = 4)
+																		#end
+
+																		#if ($RowCount == 3)
+																		#set ($AmenityTd = "class='mobile-amenities-R3-TD' width='120' style='width: 120px; padding-bottom: 20px; display: inline-block;'")
+																		#set ($AmenityPadding = "style='display: none;'")
+																		#else
+																		#set ($AmenityTd = "class='mobile-amenities-R4-TD' width='120' style='width: 120px; padding-bottom: 20px; display: inline-block;'")
+																		#set ($AmenityPadding = "width='30' style='width: 30px;'")
+																		<!-- Counted -->
+																		#end
+
+																		<td $AmenityPadding>
+																			&nbsp;
+																		</td>
+
+																		<td>
+
+																			<table align='center' valign="top" cellpadding="0" cellspacing="0" class="wrapper-full" style='text-align: center; vertical-align: top;'>
+																				<tr>
+
+																					<!-- Loop -->
+																					#set ($AmenitiesCount = 0)
+																					#foreach ($a in $amenities)
+																					#set ($AmenitiesCount = $AmenitiesCount + 1)
+
+																					<!-- Amenity -->
+																					<td align="center" valign="top" $AmenityTd>
+																						<table align='center' valign='top' border='0' cellspacing='0' cellpadding='0' style='vertical-align: top;'>
+																							<tr>
+																								<td valign="top" align="center" height='60' style='height: 60px;'>
+																									<a href="$website.url" data-surl-type="HomePage" data-surl-meta1="Amenity" target="_blank" style="text-decoration:none;">
+																										<img src="$a.ImageHTTPUrl" width="60" alt="Alt Tag Goes Here" border="0" style="width: 60px; display:block; font-size:15px; line-height: 16px; color:#ffffff; border:0px; Margin: 0;"
+																											data-autoloop-id="40f35579-ab17-4c2f-be9d-581ed3eda077">
+																									</a>
+																								</td>
+																							</tr>
+
+																							<tr>
+																								<td valign="top" align="center" style="padding-top:10px; width: 105px; padding-left: 8px; padding-right: 8px;">
+																									<span style="font-size: 12px; line-height: 15px;text-decoration: none; color: #ffffff;">$a.Name</span>
+																								</td>
+																							</tr>
+																						</table>
+																					</td>
+																					<!-- / Amenity -->
+
+																					#if($AmenitiesCount % $RowCount == 0)
+																					#set ($AmenitiesCount = 0)
+
+																				</tr>
+																			</table>
+
+																			<table align='center' valign="top" cellpadding="0" cellspacing="0" class="wrapper-full" style='text-align: center; vertical-align: top;'>
+																				<tr>
+
+																					<!-- New Row -->
+																					#end
+
+																					#end
+																					<!-- / Loop -->
+
+																				</tr>
+																			</table>
+
+																		</td>
+
+																		<td $AmenityPadding>
+																			&nbsp;
+																		</td>
+
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td height="20" style="height:20px; line-height:0px; font-size:0px;" class="h20">&nbsp;</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											#end
+
+										</table>
+									</td>
+								</tr>
+								<!-- /Amenities Editable END -->
+
+
+							</table>
+							<!-- == / Body == -->
+
+
+							<!-- == Footer == -->
+							#parse($footerOverride)
+							<!-- == / Footer == -->
+
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr class="mobile-hide">
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+</body>
+
+</html>
