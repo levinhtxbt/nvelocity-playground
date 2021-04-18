@@ -1,0 +1,3 @@
+[submodule "nvelocity"]
+	path = NVelocity
+	url = https://github.com/castleproject/NVelocity
