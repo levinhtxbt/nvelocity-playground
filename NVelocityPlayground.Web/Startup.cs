@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using NVelocityPlayground.Web.Controllers;
 using NVelocityPlayground.Web.Processor;
+using NVelocity.Service;
 
 namespace NVelocityPlayground.Web
 {
@@ -20,6 +21,8 @@ namespace NVelocityPlayground.Web
         {
             services.AddScoped<ImageProcessor>();
             services.AddControllers();
+            services.AddScoped<TemplateProcess>();
+            services.AddScoped<HttpProcess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

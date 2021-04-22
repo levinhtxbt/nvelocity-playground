@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
-using NVelocity.Service.Constant;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,38 +12,19 @@ namespace NVelocity.Service
     {
         private readonly HttpProcess _http;
         private readonly string _env;
+        private readonly IConfiguration _configuration;
 
-        public TemplateProcess()
+        public TemplateProcess(IConfiguration configuration, HttpProcess http)
         {
-            _http = new HttpProcess();
-
-            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
-            if (string.IsNullOrEmpty(environmentName))
-                _env = "development";
-            else
-                _env = environmentName.ToLower();
+            _http = http;
+            _configuration = configuration;
         }
 
         public async Task<string> GetTemplate(string name)
         {
             var url = "";
 
-            switch (_env)
-            {
-                case "development":
-                    url = TemplateUrlConstant.Dev;
-                    break;
-                case "staging":
-                    url = TemplateUrlConstant.Staging;
-                    break;
-                case "production":
-                    url = TemplateUrlConstant.Production;
-                    break;
-                default:
-                    url = TemplateUrlConstant.Dev;
-                    break;
-            }
+            url = _configuration["TemplateUrl"];
 
             url = Path.Combine(url, name);
 

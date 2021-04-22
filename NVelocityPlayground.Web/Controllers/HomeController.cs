@@ -22,11 +22,11 @@ namespace NVelocityPlayground.Web.Controllers
         private readonly VelocityEngine _velocityEngine;
         private readonly string FILE_RESOURCE_LOADER_PATH;
 
-        public HomeController(IWebHostEnvironment env, ImageProcessor image)
+        public HomeController(IWebHostEnvironment env, ImageProcessor image, IServiceProvider provider)
         {
             _env = env;
             _image = image;
-            _velocityEngine = new VelocityEngine();
+            _velocityEngine = new VelocityEngine(provider);
             _velocityEngine.SetProperty(RuntimeConstants.INPUT_ENCODING, "UTF-8");
             FILE_RESOURCE_LOADER_PATH = Path.Combine(
                 _env.ContentRootPath /*AppDomain.CurrentDomain.BaseDirectory*/,

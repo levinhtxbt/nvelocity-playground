@@ -17,9 +17,9 @@ namespace NVelocityPlayground.Web.Controllers
     {
         private readonly VelocityEngine _velocityEngine;
 
-        public TestingController()
+        public TestingController( IServiceProvider provider)
         {
-            _velocityEngine = new VelocityEngine();
+            _velocityEngine = new VelocityEngine(provider);
             _velocityEngine.Init();
         }
 
@@ -39,7 +39,7 @@ namespace NVelocityPlayground.Web.Controllers
         {
             return Ok(new
             {
-                Html = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa $name "
+                Html = "<h1>Hello $name</h1>"
             });
         }
 
