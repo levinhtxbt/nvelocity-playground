@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NVelocity.Service\NVelocity.Service.csproj" />
+    <ProjectReference Include="..\NVelocity.TemplateLoader\NVelocity.TemplateLoader.csproj" />
     <ProjectReference Include="..\NVelocity\src\NVelocity\NVelocity.csproj" />
   </ItemGroup>
 

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVelocity", "NVelocity\src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVelocity.Tests", "NVelocity\src\NVelocity.Tests\NVelocity.Tests.csproj", "{017A3BC6-F530-48C2-930E-B4125F600B63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVelocity.Service", "NVelocity.Service\NVelocity.Service.csproj", "{909C86D1-DEED-4AD7-B43F-3FAC84EBD859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NVelocity.Service", "NVelocity.Service\NVelocity.Service.csproj", "{909C86D1-DEED-4AD7-B43F-3FAC84EBD859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NVelocity.TemplateLoader", "NVelocity.TemplateLoader\NVelocity.TemplateLoader.csproj", "{8B85B262-0E24-426D-9B06-593051A55B08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{909C86D1-DEED-4AD7-B43F-3FAC84EBD859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{909C86D1-DEED-4AD7-B43F-3FAC84EBD859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{909C86D1-DEED-4AD7-B43F-3FAC84EBD859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B85B262-0E24-426D-9B06-593051A55B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B85B262-0E24-426D-9B06-593051A55B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B85B262-0E24-426D-9B06-593051A55B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B85B262-0E24-426D-9B06-593051A55B08}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

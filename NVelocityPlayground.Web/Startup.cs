@@ -7,9 +7,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NVelocity.Extensions;
+using NVelocity.TemplateLoader;
+using NVelocity.Tool;
 using NVelocityPlayground.Web.Controllers;
 using NVelocityPlayground.Web.Processor;
-using NVelocity.Service;
 
 namespace NVelocityPlayground.Web
 {
@@ -21,8 +23,11 @@ namespace NVelocityPlayground.Web
         {
             services.AddScoped<ImageProcessor>();
             services.AddControllers();
-            services.AddScoped<TemplateProcess>();
-            services.AddScoped<HttpProcess>();
+            services.AddNVelocity(cfg =>
+            {
+                cfg.AddTemplateLoader();
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
